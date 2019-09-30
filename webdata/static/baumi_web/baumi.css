@@ -1,0 +1,71 @@
+#box01 {
+  position         : absolute;
+  background-color : silver;
+  top              : 100px;
+  left             : 80px;
+  width            : 90%;
+  border-radius    : 0px 20px 20px 0px;
+  font-color       : red;
+  padding          : 10px;
+  min-height       : 1000px;
+}
+
+#box01_label {
+  position         : absolute;
+  background-color : silver;
+  top              : 140px;
+  left             : 0px;
+  width            : 120px;
+  height           : 40px;
+  border-radius    : 15px 15px 0px 0px;
+  transform        : rotate(-90deg);
+}
+
+#box01_text {
+  position         : relative;
+  background-color : silver;
+  top              : 15px;
+  left             : 5px;
+  height           : 20px;
+  width            : 90px;
+  padding          : 0px;
+  text-align       : center;
+}
+
+#box02 {
+  position         : absolute;
+  background-color : lightblue;
+  top              : 100px;
+  left             : 80px;
+  width            : 90%;
+  border-radius    : 0px 20px 20px 0px;
+  font-color       : red;
+  padding          : 10px;
+  min-height       : 1000px;
+}
+
+#box02_label {
+  position         : absolute;
+  background-color : lightblue;
+  top              : 240px;
+  left             : 0px;
+  width            : 120px;
+  height           : 40px;
+  border-radius    : 15px 15px 0px 0px;
+  transform        : rotate(-90deg);
+}
+
+#box02_text {
+  position         : relative;
+  background-color : lightblue;
+  top              : 15px;
+  left             : 5px;
+  height           : 20px;
+  width            : 90px;
+  padding          : 0px;
+  text-align       : center;
+}
+
+.label:hover {
+  z-index:99;
+}

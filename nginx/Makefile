@@ -32,7 +32,7 @@ restart: stop
 
 run: clean 
 	docker run --name=${CONTAINER_NAME}                     \
-  -v $$PWD/environment/sites:${WWW_PATH}                  \
+	-v $$PWD/../webdata/static:${WWW_PATH}                  \
   -v $$PWD/environment/nginx:${HOME}                      \
   -v $$PWD/environment/logs:${LOG_PATH}                   \
   -p 80:80                                                \
