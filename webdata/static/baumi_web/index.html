@@ -7,49 +7,62 @@
   </HEAD>
 
   <SCRIPT type="text/javascript">
-    function clickBoxLabel1() {
-      document.getElementById("box01").style.zIndex = "20";
-      document.getElementById("box02").style.zIndex = "9";
+
+    function setZonClass(_class , _index) {
+      for (var _elem of document.getElementsByClassName(_class)) {
+        _elem.style.zIndex = _index;
+      }
     }
-    function clickBoxLabel2() {
-      document.getElementById("box01").style.zIndex = "10";
-      document.getElementById("box02").style.zIndex = "20";
+
+    function clickBoxLabel(_master) {
+      setZonClass("box1" , 10);
+      setZonClass("box2" , 9);
+      setZonClass("box3" , 9);
+      setZonClass(_master , 20);
     }
   </SCRIPT>
 
   <BODY>
-    <DIV id="box01_label" class="label">
-      <DIV id="box01_text" class="box">
-        <A href="javascript:clickBoxLabel1()">BOX - 01</A>
+    <DIV class="box box1">
+      <DIV> BOX - 1 -  Header 
       </DIV>
-    </DIV>
-    <DIV id="box01" class="box">
-      <DIV id="box01_header" class="box">
-        <A href="#B1_P1">part 01 </A> &nbsp;
-        <A href="#B1_P2">part 02 </A>
+      <A href="javascript:clickBoxLabel('box1')">
+      <DIV class="box label box1 label1">
+        <DIV class="box1 labeltext">
+          BOX - 01
+        </DIV>
+      </DIV></A>
+      <DIV class="box1 content">
+        CONTENT
       </DIV>
-      <H1 id="B1_P1"> Box 1 Inhalt Seite 1 </H1>
-      <P> Was auch immer hier stehen mag.... </P>
-      <hr>
-      <H1 id="B1_P2"> Box 1 Inhalt Seite 2 </H1>
-      <P> Jetzt ein Gedicht.. das wäre was. </P>
     </DIV>
 
-    <DIV id="box02_label" class="label">
-      <DIV id="box02_text" class="box">
-        <A href="javascript:clickBoxLabel2()">BOX - 02</A>
+    <DIV class="box box2">
+      <DIV> BOX - 2 - Header 
+      </DIV>
+      <A href="javascript:clickBoxLabel('box2')">
+      <DIV class="box label box2 label2">
+        <DIV class="box2 labeltext">
+          BOX - 02
+        </DIV>
+      </DIV></A>
+      <DIV class="box2 content">
+        CONTENT
       </DIV>
     </DIV>
-    <DIV id="box02" class="box">
-      <DIV id="box02_header" class="box">
-        <A href="#B2_P1">part 01 </A> &nbsp;
-        <A href="#B2_P2">part 02 </A>
+
+    <DIV class="box box3">
+      <DIV> BOX - 3 - Header 
       </DIV>
-      <H1 id="B2_P1"> Box 2 Inhalt Seite 1 </H1>
-      <P> Was auch immer hier stehen mag.... </P>
-      <hr>
-      <H1 id="B2_P2"> Box 2 Inhalt Seite 2 </H1>
-      <P> Jetzt ein Gedicht.. das wäre was. </P>
+      <A href="javascript:clickBoxLabel('box3')">
+      <DIV class="box label box3 label3">
+        <DIV class="box3 labeltext">
+          BOX - 03
+        </DIV>
+      </DIV></A>
+      <DIV class="box3 content">
+        CONTENT
+      </DIV>
     </DIV>
 
   </BODY>
